@@ -1,0 +1,544 @@
+:root{
+    --light_shades: white;
+    --light_accent: #C4C4C4;
+    --main_brand: #58C8E4;
+    --dark_accent: #021A4B;
+    --dark_shades: #031627;
+    --font-title: 'Roboto', sans-serif;
+    --font-text: 'Rubik', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-title);
+}
+p, span, small, blockquote, a, button{
+    font-family: var(--font-text);
+}
+a:focus{
+    outline: 1px solid var(--main_brand);
+}
+blockquote{
+    font-style: italic;
+}
+*{
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1180px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.block_text{
+    display: flex;
+    margin: 40px 0;
+}
+.block_text .title{
+    width: 15%;
+    font-size: 21px;
+}
+.block_text .cotent{
+    width: 85%;
+}
+.block_text h1, .block_text h2, .block_text h3, .block_text h4, .block_text h5, .block_text h6, .block_text p, .block_text span, .block_text small, .block_text a{
+    margin: 0;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    font-size: 60px;
+    text-align: center;
+}
+.button_color{
+    width: 150px;
+    height: 50px;
+    position: relative;
+}
+.line{
+    position: absolute;
+    width: 100%;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #58C8E4;
+    z-index: 8;
+     
+    border: 1px solid green;
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: blue;
+    border: 7px solid #939393;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9;
+     
+}
+.button_color label{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 12;
+    display: block;
+}
+.button_color input{
+    opacity: 0;
+    position: absolute;
+}
+.button_color input:checked ~ .circle{
+    left: 105px;
+    background-color: #008000;
+}
+.button_color input:checked ~ .line{
+    background-color: #64CC30;
+}
+section>h2{
+    text-align: center;
+    font-size: 52px;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+section>h2:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    height: 4px;
+    width: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--light_accent);
+}
+#main__colors .container{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: var(--font-title);
+    justify-content: space-around;
+}
+.title{
+    font-family: var(--font-title);
+}
+#main__colors .main_color{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    display: block;
+}
+.light_accent_color{
+    background-color: var(--light_accent);
+}
+.light_shades_color{
+    background-color: var(--light_shades);
+}
+.main_brand_color{
+    background-color: var(--main_brand);
+}
+.dark_accent_color{
+    background-color: var(--dark_accent);
+}
+.dark_shades_color{
+    background-color: var(--dark_shades);
+}
+.block_text h2{
+    font-size: 52px;
+}
+.block_text h3{
+    font-size: 40px;
+}
+.block_text h4{
+    font-size: 36px;
+}
+.block_text h1{
+    font-size: 60px;
+}
+.block_text h6{
+    font-size: 22px;
+}
+.block_text h5{
+    font-size: 26px;
+}
+.block_text p{
+    font-size: 18px;
+}
+.block_text span{
+    font-size: 18px;
+}
+.block_text a{
+    font-size: 18px;
+}
+.block_text blockquote{
+    font-size: 22px;
+}
+#size_button .container{
+    display: flex;
+    flex-direction: column;
+}
+#size_button button{
+    margin: 7px 0;
+    border-radius: 7px;
+    background-color: var(--main_brand);
+    transition: 0.3s all ease;
+    border: none;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.3);
+}
+#size_button button:hover{
+    background-color: var(--dark_accent);
+    color: white;
+    box-shadow: none;
+}
+#size_button button:active{
+    background-color: var(--dark_shades);
+    color: white;
+    box-shadow: none;
+}
+.small_size{
+    width: 100px;
+    height: 34px;
+    font-size: 13px;
+}
+.medium_size{
+    width: 130px;
+    height: 41px;
+    font-size: 14px;
+    border-radius: 7px;
+}
+.large_size{
+    width: 150px;
+    font-size: 15px;
+    height: 46px;
+}
+#light-button button{
+    margin: 7px 0;
+    border-radius: 7px;
+    transition: 0.3s all ease;
+    border: none;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.3);
+}
+#light-button .primary button{
+    background-color: var(--main_brand);
+}
+#light-button .primary button:focus{
+    outline: 1px solid var(--main_brand);
+}
+#light-button .primary button:hover{
+    background-color: var(--dark_accent);
+    color: white;
+    box-shadow: none;
+}
+#light-button .primary button:active{
+    background-color: var(--dark_shades);
+    color: white;
+    box-shadow: none;
+}
+#light-button .primary_alt button{
+    background-color: var(--dark_accent);
+    color: white;
+}
+#light-button .primary_alt button:focus{
+    outline: 1px solid var(--dark_accent);
+}
+#light-button .primary_alt button:hover{
+    background-color: var(--main_brand);
+    box-shadow: none;
+    color: var(--dark_shades)
+}
+#light-button .primary_alt button:active{
+    background-color: var(--dark_shades);
+    color: white;
+    box-shadow: none;
+}
+#light-button .secondary button{
+    background-color: var(--light_shades);
+    border: 1px solid var(--light_accent)
+}
+#light-button .secondary button:focus{
+    outline: 1px solid var(--main_brand);
+}
+#light-button .secondary button:hover{
+    background-color: var(--light_accent);
+    border: 1px solid var(--dark_accent);
+    box-shadow: none;
+}
+#light-button .secondary button:active{
+    background-color: var(--dark_shades);
+    color: white;
+    box-shadow: none;
+}
+#light-button .secondary_alt button{
+    background-color: var(--light_accent);
+    border: 1px solid var(--light_accent);
+    color: var(--dark_shades)
+}
+#light-button .secondary_alt button:focus{
+    outline: 1px solid var(--main_brand);
+}
+#light-button .secondary_alt button:hover{
+    background-color: var(--light_shades);
+    border: 1px solid var(--dark_accent);
+    box-shadow: none;
+}
+#light-button .secondary_alt button:active{
+    background-color: var(--dark_shades);
+    color: white;
+    box-shadow: none;
+}
+#light-button .container, #dark-button .container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+#light-button .container div, #dark-button .container div{
+    width: 45%;
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    justify-content: space-around;
+}
+#light_text h1{
+    color: var(--main_brand)
+}
+#light_text h2{
+    color: var(--dark_accent)
+}
+#light_text h3{
+    color: var(--light_accent)
+}
+#light_text h4{
+    color: var(--main_brand)
+}
+#light_text h5{
+    color: var(--dark_accent)
+}
+#light_text h6{
+    color: var(--light_accent)
+}
+#light_text p{
+    color: var(--dark_shades)
+}
+#light_text span{
+    color: var(--dark_shades)
+}
+#light_text a{
+    color: var(--light_accent)
+}
+#light_text blockquote{
+    color: var(--dark_accent)
+}
+#light_text small{
+    color: var(--dark_shades)
+}
+#dark_text, #dark-button{
+    background-image: linear-gradient(to bottom, var(--dark_accent), var(--dark_shades));
+}
+#dark_text h1{
+    color: var(--light_shades)
+}
+#dark_text h2{
+    color: var(--main_brand)
+}
+#dark_text h3{
+    color: var(--light_shades)
+}
+#dark_text h4{
+    color: var(--main_brand)
+}
+#dark_text h5{
+    color: var(--light_accent)
+}
+#dark_text h6{
+    color: var(--light_shades)
+}
+#dark_text p{
+    color: var(--light_shades)
+}
+#dark_text span{
+    color: var(--light_shades)
+}
+#dark_text a{
+    color: var(--light_accent)
+}
+#dark_text blockquote{
+    color: var(--light_shades)
+}
+#dark_text small{
+    color: var(--light_shades)
+}
+#dark_text .title{
+    color: var(--light_shades)
+}
+#dark-button{
+    color: white;
+}
+#dark-button button{
+    margin: 7px 0;
+    border-radius: 7px;
+    transition: 0.3s all ease;
+    border: none;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.3);
+}
+#dark-button .primary button{
+    background-color: var(--main_brand);
+}
+#dark-button .primary button:focus{
+    outline: 1px solid var(--main_brand);
+}
+#dark-button .primary button:hover{
+    background-color: var(--light_accent);
+    border: 1px solid var(--main_brand);
+    box-shadow: none;
+}
+#dark-button .primary button:active{
+    box-shadow: none;
+    background-color: var(--main_brand);
+}
+#dark-button .primary_alt button{
+    background-color: var(--light_shades);
+    border: 1px solid var(--main_brand);
+}
+#dark-button .primary_alt button:focus{
+    outline: 1px solid var(--main_brand);
+}
+#dark-button .primary_alt button:hover{
+    background-color: var(--main_brand);
+    box-shadow: none;
+    color: var(--dark_shades)
+}
+#dark-button .primary_alt button:active{
+    background-color: var(--dark_shades);
+    color: white;
+    box-shadow: none;
+}
+#dark-button .secondary button{
+    background-color: var(--light_shades);
+    border: 1px solid var(--main_brand);
+}
+#dark-button .secondary button:focus{
+    outline: 1px solid var(--main_brand);
+}
+#dark-button .secondary button:hover{
+    background-color: var(--light_accent);
+    border: 1px solid var(--main_brand);
+    box-shadow: none;
+}
+#dark-button .secondary button:active{
+    background-color: var(--dark_shades);
+    color: white;
+    border: 1px solid var(--main_brand);
+    box-shadow: none;
+}
+#dark-button .secondary_alt button{
+    background-color: var(--light_accent);
+    border: 1px solid var(--main_brand);
+    color: var(--dark_shades)
+}
+#dark-button .secondary_alt button:focus{
+    outline: 1px solid var(--main_brand);
+}
+#dark-button .secondary_alt button:hover{
+    background-color: var(--light_shades);
+    border: 1px solid var(--main_brand);
+    box-shadow: none;
+}
+#dark-button .secondary_alt button:active{
+    background-color: var(--dark_shades);
+    color: white;
+    border: 1px solid var(--main_brand);
+    box-shadow: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    .container{
+        width: 100%;
+        padding: 15px;
+    }
+    header h1{
+        font-size: 47px;
+    }
+    section > h2{
+        font-size: 42px;
+    }
+    #main__colors .container{
+        flex-wrap: wrap;
+    }
+    .block_text{
+        flex-direction: column;
+    }
+    .block_text .title{
+        width: 100%;
+    }
+    .block_text h1{
+        font-size: 47px;
+    }
+    .block_text h2{
+        font-size: 42px;
+    }
+    .block_text h3{
+        font-size: 36px;
+    }
+    .block_text h4{
+        font-size: 32px;
+    }
+    .block_text h5{
+        font-size: 27px;
+    }
+    .block_text h6{
+        font-size: 24px;
+    }
+    .block_text p{
+        font-size: 16px;
+    }
+    .block_text span{
+        font-size: 16px;
+    }
+    .block_text a{
+        font-size: 16px;
+    }
+    .block_text blockquote{
+        font-size: 16px;
+    }
+    .block_text .cotent{
+        width: 100%;
+    }
+    #light-button .container, #dark-button .container{
+        display: flex;
+        flex-direction: column;
+    }
+    #light-button .container div, #dark-button .container div{
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #size_button .container{
+        align-items: center;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 993px) and (max-width: 1190px){
+    .container{
+        width: 970px;
+    }
+}
